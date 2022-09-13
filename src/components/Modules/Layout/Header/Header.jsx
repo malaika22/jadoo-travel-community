@@ -1,7 +1,8 @@
 import React from "react";
-import Logo from "../../../components/Logo/Logo";
+import Logo from "../../../Elements/Logo/Logo";
 import NavItems from "./NavItems";
 import { motion } from "framer-motion";
+import Snackbar from "./Snackbar";
 const Header = () => {
   const links = [
     {
@@ -24,7 +25,7 @@ const Header = () => {
   return (
     <header className='flex justify-between px-20  items-center pt-10'>
       <Logo />
-      <div className='flex justify-between items-center w-[800px]'>
+      <div className='hidden md:flex justify-between items-center w-[800px]'>
         <div className='grid grid-cols-4 gap-x-4 '>
           {links.map(({ href, title }) => (
             <NavItems href={href} title={title} key={title} />
@@ -35,6 +36,7 @@ const Header = () => {
           <AuthButton>Sign up</AuthButton>
         </div>
       </div>
+      <Snackbar />
     </header>
   );
 };
