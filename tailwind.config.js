@@ -10,7 +10,7 @@ module.exports = {
         primaryLight: "var(--color-primary-light)",
         bgPrimary: "#FFFFFF",
         bgSecondary: "#DFD7F9",
-        secondaryLight: "#212832;",
+        secondaryLight: "#212832",
       },
     },
   },
