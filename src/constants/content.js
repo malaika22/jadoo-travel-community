@@ -17,3 +17,21 @@ export const services = [
     details: "We deliver outsource daviation services for military customers",
   },
 ];
+
+export const destinations = [
+  {
+    title: "Rome, Italy",
+    price: "$5,42k",
+    duration: "10",
+  },
+  {
+    title: "London, UK",
+    price: "$4.2k",
+    duration: "12",
+  },
+  {
+    title: "Full Europe",
+    price: "$15k",
+    duration: "28",
+  },
+];
