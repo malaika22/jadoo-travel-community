@@ -1,21 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { hoverMotion } from "../../../../constants/variants.constant";
 const NavItems = ({ href, title }) => {
-  const hoverMotion = {
-    rest: {
-      width: 0,
-      backgroundColor: "#5e6282",
-      transition: {
-        duration: 0.2,
-      },
-    },
-    hover: {
-      width: "100%",
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
   return (
     <motion.div
       initial='rest'
