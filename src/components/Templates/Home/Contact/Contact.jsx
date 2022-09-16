@@ -18,19 +18,19 @@ const Contact = () => {
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
         offset={{ bottom: 300 }}
       >
-        <div className='my-20'>
-          <Container>
-            <motion.div
-              animate={visible ? "visible" : "invisible"}
-              variants={opacityVariants}
-              style={{
-                backgroundImage: `url(${BG})`,
-              }}
-              initial='invisible'
-              whileInView={() => setVisible(true)}
-              transition={{ duration: 0.5 }}
-              className='relative text-center py-20 rounded-xl max-w-6xl mx-auto'
-            >
+        <div className='py-20'>
+          <motion.div
+            animate={visible ? "visible" : "invisible"}
+            variants={opacityVariants}
+            style={{
+              backgroundImage: `url(${BG})`,
+            }}
+            initial='invisible'
+            whileInView={() => setVisible(true)}
+            transition={{ duration: 0.5 }}
+            className='relative text-center py-20 rounded-xl max-w-6xl mx-auto'
+          >
+            <Container>
               <h4 className='text-primaryLight text-3xl font-semibold leading-relaxed max-w-3xl mx-auto'>
                 Subscribe to get information, latest news and other interesting
                 offers about Cobham
@@ -59,11 +59,19 @@ const Contact = () => {
               <motion.div className='absolute bottom-0 left-0 -z-10 grayscale'>
                 <img src={BottomDecor} className='h-full' />
               </motion.div>
-              <motion.div className='bg-gradient-to-t from-[#747DEF] to-[#5E3BE1] absolute top-0 right-0'>
-                <RiSendPlaneFill />
+              <motion.div
+                className='bg-gradient-to-t  rounded-full flex items-center justify-center from-[#747DEF] to-[#5E3BE1] absolute -top-6 -right-6'
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 2,
+                }}
+              >
+                <RiSendPlaneFill className='text-white text-3xl m-5 font-bold' />
               </motion.div>
-            </motion.div>
-          </Container>
+            </Container>
+          </motion.div>
         </div>
       </ReactVisibilitySensor>
     </>

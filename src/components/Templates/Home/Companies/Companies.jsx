@@ -22,7 +22,7 @@ const Companies = () => {
         partialVisibility
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
       >
-        <div className='my-20'>
+        <div className='py-20'>
           <Container>
             <div className='grid grid-cols-5 gap-x-5 max-w-6xl mx-auto items-center'>
               {Images.map((img, i) => (

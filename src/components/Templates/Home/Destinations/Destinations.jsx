@@ -21,7 +21,7 @@ const Destinations = () => {
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
         offset={{ bottom: 300 }}
       >
-        <div className='my-20'>
+        <div className='py-20'>
           <Container>
             <motion.div
               animate={visible ? "visible" : "invisible"}
