@@ -14,3 +14,29 @@ export const scaleVariants = {
     scale: 1,
   },
 };
+
+export const bounceVariants = {
+  start: {
+    rotate: 360,
+    x: [600, 0],
+    // transition: {
+    //   duration: 1,
+    // },
+  },
+};
+
+export const hoverMotion = {
+  rest: {
+    width: 0,
+    backgroundColor: "#5e6282",
+    transition: {
+      duration: 0.2,
+    },
+  },
+  hover: {
+    width: "100%",
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
