@@ -21,16 +21,18 @@ const Companies = () => {
       <ReactVisibilitySensor
         partialVisibility
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
+        offset={{ bottom: 300 }}
       >
-        <div className='py-20'>
+        <div className='my-20'>
           <Container>
-            <div className='grid grid-cols-5 gap-x-5 max-w-6xl mx-auto items-center'>
+            <div className='grid sm:grid-cols-3 lg:grid-cols-5 gap-x-5 max-w-6xl mx-auto items-center'>
               {Images.map((img, i) => (
                 <motion.div
                   key={i}
                   variants={scaleVariants}
                   animate={visible ? "visible" : "invisible"}
                   transition={{ duration: 1 }}
+                  className='h-[100px] flex items-center mx-auto'
                 >
                   <img src={img} />
                 </motion.div>
