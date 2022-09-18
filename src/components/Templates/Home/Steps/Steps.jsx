@@ -20,21 +20,21 @@ const Steps = () => {
       <ReactVisibilitySensor
         partialVisibility
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
-        offset={{ bottom: 300 }}
+        offset={{ bottom: 500 }}
       >
-        <div className='py-20'>
+        <div className='my-20'>
           <Container>
-            <div className='grid grid-cols-2 gap-x-5 max-w-6xl mx-auto'>
+            <div className='grid md:grid-cols-2 gap-x-5 max-w-6xl mx-auto'>
               <motion.div
                 animate={visible ? "visible" : "invisible"}
                 variants={opacityVariants}
                 initial='invisible'
                 whileInView={() => setVisible(true)}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
                 className='text-center'
               >
                 <div>
-                  <div className='text-left max-w-lg'>
+                  <div className='text-left max-w-lg md:ml-auto mx-auto'>
                     <SectionHeader
                       title='Book your next trip  in 3 easy steps'
                       subtitle='Easy and Fast'
@@ -72,7 +72,7 @@ const StepsSection = () => {
       <motion.div
         variants={container}
         animate={visible ? "show" : "hidden"}
-        className='pt-20 py-10 mx-auto '
+        className='md:pt-20 py-10 mx-auto '
       >
         {steps.map((destination, i) => (
           <StepItem key={destination.title} {...destination} img={Images[i]} />
@@ -125,7 +125,7 @@ const ImageSection = () => {
       onChange={(isVisible) => isVisible && setVisible(isVisible)}
       offset={{ bottom: 300 }}
     >
-      <div className='relative'>
+      <div className='relative min-h-[300px] md:h-full'>
         <motion.div
           className='absolute left-0 right-0 top-0 bottom-0 m-auto h-fit'
           variants={imageVariants.bottomImage}
