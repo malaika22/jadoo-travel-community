@@ -10,23 +10,25 @@ const LeftContent = () => {
         x: 0,
         opacity: 1,
       }}
+      viewport={{ once: true }}
+      className='text-center md:text-left'
     >
       <div className='text-[#DF6951] font-bold text-xl py-5'>
         Best Destinations around the world
       </div>
-      <div className='text-primary font-bold text-7xl w-[600px]'>
+      <div className='text-primary font-bold text-5xl  sm:text-6xl '>
         Travel,{" "}
-        <div className='inline-block w-fit'>
+        <div className='inline-block w-fit relative'>
           <span>enjoy</span>
           <img
             src={HeadingDecor}
             alt='Heading decor'
-            className='w-[300px] absolute'
+            className='absolute w-full'
           />
         </div>{" "}
         and live a new and full life
       </div>
-      <p className='text-primaryLight text-lg font-semibold w-[500px] py-10'>
+      <p className='text-primaryLight text-lg font-semibold md:w-[500px] py-10'>
         Built Wicket longer admire do barton vanity itself do in it. Preferred
         to sportsmen it engrossed listening. Park gate sell they west hard for
         the.

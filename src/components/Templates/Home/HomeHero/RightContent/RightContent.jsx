@@ -11,8 +11,9 @@ const RightContent = () => {
         x: 0,
         opacity: 1,
       }}
+      viewport={{ once: true }}
     >
-      <img src={HeroDecor} className='w-[620px]' />
+      <img src={HeroDecor} className='w-[620px] ' />
     </motion.div>
   );
 };

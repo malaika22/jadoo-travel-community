@@ -4,7 +4,7 @@ import RightContent from "./RightContent/RightContent";
 
 const HeroSection = () => {
   return (
-    <div className='grid grid-cols-2 overflow-hidden  px-20 py-10'>
+    <div className='md:grid grid-cols-2 overflow-hidden max-w-5xl py-10 mx-auto'>
       <LeftContent />
       <RightContent />
     </div>
