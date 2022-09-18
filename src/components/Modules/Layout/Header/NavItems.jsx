@@ -7,7 +7,7 @@ const NavItems = ({ href, title }) => {
       initial='rest'
       whileHover='hover'
       animate='rest'
-      className='w-fit mx-auto'
+      className='w-fit mx-auto px-6'
     >
       <motion.a href={href} className='text-secondaryLight font-semibold'>
         {title}

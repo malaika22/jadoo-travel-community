@@ -3,6 +3,7 @@ import Logo from "../../../Elements/Logo/Logo";
 import NavItems from "./NavItems";
 import { motion } from "framer-motion";
 import Snackbar from "./Snackbar";
+import Container from "../../Container/Container";
 const Header = () => {
   const links = [
     {
@@ -23,21 +24,23 @@ const Header = () => {
     },
   ];
   return (
-    <header className='flex justify-between px-20  items-center pt-10'>
-      <Logo />
-      <div className='hidden md:flex justify-between items-center w-[800px]'>
-        <div className='grid grid-cols-4 gap-x-4 '>
+    <Container>
+      <header className='flex justify-between px-4  items-center  pt-10'>
+        <Logo />
+        <div className='hidden md:flex justify-between items-center '>
+          {/* <div className='grid grid-cols-4 gap-x-4 '> */}
           {links.map(({ href, title }) => (
             <NavItems href={href} title={title} key={title} />
           ))}
-        </div>
-        <div className='flex items-center gap-x-5 '>
+          {/* </div> */}
           <AuthButton>Login</AuthButton>
-          <AuthButton>Sign up</AuthButton>
+          {/* <div className='flex items-center gap-x-5 '>
+          <AuthButton>Login</AuthButton>
+        </div> */}
         </div>
-      </div>
-      <Snackbar />
-    </header>
+        <Snackbar />
+      </header>
+    </Container>
   );
 };
 
