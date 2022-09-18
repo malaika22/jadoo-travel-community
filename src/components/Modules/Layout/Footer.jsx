@@ -11,6 +11,8 @@ import Container from "../Container/Container";
 import { motion } from "framer-motion";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
+import AppleIcon from "../../../assets/icons/apple-icon.png";
+import GoogleIcon from "../../../assets/icons/google-icon.png";
 const Footer = () => {
   const variant = {
     hidden: {},
@@ -82,7 +84,7 @@ const Footer = () => {
                     </motion.div>
                     {links.map((link, i) => (
                       <motion.div
-                        className='text-primaryLight font-semibold py-1 w-fit mx-auto cursor-pointer'
+                        className='group text-primaryLight font-semibold py-1 w-fit mx-auto cursor-pointer'
                         key={i}
                         variants={{
                           hidden: {
@@ -99,10 +101,7 @@ const Footer = () => {
                         }}
                       >
                         {link}
-                        <motion.div
-                          variants={hoverMotion}
-                          className='h-[2px] bg-red-500 '
-                        ></motion.div>
+                        <div className='bg-primaryLight w-0 transition-all duration-300 group-hover:w-full'></div>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -135,8 +134,22 @@ const Footer = () => {
                     <AiOutlineTwitter className='text-[#080809] text-xl' />
                   </motion.div>
                 </div>
-                <div className='text-primaryLight text-lg font-semibold my-6'>
+                <div className='text-primaryLight text-lg font-semibold my-3'>
                   Discover our app
+                </div>
+                <div className='flex items-center gap-x-4'>
+                  <div className='bg-black flex items-center px-2 py-3 justify-center gap-x-2 rounded-3xl w-full'>
+                    <img src={GoogleIcon} />
+                    <div className='text-white '>
+                      <div className='text-[12px]'>Google Play</div>
+                    </div>
+                  </div>
+                  <div className='bg-black  items-center flex px-2 py-3 justify-center gap-x-2 rounded-3xl w-full'>
+                    <img src={AppleIcon} />
+                    <div className='text-white '>
+                      <div className='text-[12px]'>Apple Store</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
