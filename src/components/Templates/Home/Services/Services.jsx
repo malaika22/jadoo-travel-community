@@ -21,13 +21,13 @@ const Services = () => {
       onChange={(isVisible) => isVisible && setVisible(isVisible)}
       offset={{ bottom: 300 }}
     >
-      <div className='py-20'>
+      <div className='my-20'>
         <Container>
           <motion.div
             animate={visible ? "visible" : "invisible"}
             variants={opacityVariants}
             initial='invisible'
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             className='text-center'
           >
             <SectionHeader title='We Offer Best Services' subtitle='Category' />
@@ -36,10 +36,10 @@ const Services = () => {
             animate={visible ? "visible" : "invisible"}
             variants={opacityVariants}
             initial='invisible'
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 1, delay: 1 }}
             className='text-center '
           >
-            <div className='grid grid-cols-4  pt-20 py-10 max-w-7xl mx-auto'>
+            <div className='grid  sm:grid-cols-2 md:grid-cols-4  pt-20 py-10 max-w-7xl mx-auto'>
               {services.map((service, i) => (
                 <ServiceCard key={service.title} img={Images[i]} {...service} />
               ))}
