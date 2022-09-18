@@ -61,7 +61,7 @@ const Footer = () => {
               initial='invisible'
               whileInView={() => setVisible(true)}
               transition={{ duration: 0.5 }}
-              className='text-center max-w-6xl grid grid-cols-4 mx-auto'
+              className='text-center max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-y-8  mx-auto'
             >
               <div className='col-span-1'>
                 <h4 className='text-primary text-4xl font-bold mb-5'>Jadoo.</h4>
@@ -101,7 +101,7 @@ const Footer = () => {
                         }}
                       >
                         {link}
-                        <div className='bg-primaryLight w-0 transition-all duration-300 group-hover:w-full'></div>
+                        <div className='bg-primaryLight w-0 transition-all duration-300 h-[1px] group-hover:w-full'></div>
                       </motion.div>
                     ))}
                   </motion.div>
