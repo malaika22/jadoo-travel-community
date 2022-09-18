@@ -16,7 +16,7 @@ const DestinationCard = ({ img, title, price, duration }) => {
     <motion.div
       variants={item}
       transition={{ duration: 1 }}
-      className='w-[300px] mx-auto bg-white shadow-xl rounded-[20px] scale-100'
+      className='sm:w-[300px] mx-auto bg-white shadow-xl rounded-[20px] scale-100'
     >
       <div className='h-[300px] overflow-hidden rounded-tl-[20px] rounded-tr-[20px]'>
         <img src={img} alt={title} />

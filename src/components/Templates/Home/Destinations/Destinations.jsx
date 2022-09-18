@@ -19,16 +19,16 @@ const Destinations = () => {
       <ReactVisibilitySensor
         partialVisibility
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
-        offset={{ bottom: 300 }}
+        offset={{ bottom: 500 }}
       >
-        <div className='py-20'>
+        <div className='my-20'>
           <Container>
             <motion.div
               animate={visible ? "visible" : "invisible"}
               variants={opacityVariants}
               initial='invisible'
               whileInView={() => setVisible(true)}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               className='text-center'
             >
               <SectionHeader title='Top Destinations' subtitle='Top Selling ' />
@@ -56,11 +56,12 @@ const DestinationCardSection = () => {
     <ReactVisibilitySensor
       partialVisibility
       onChange={(isVisible) => isVisible && setVisible(isVisible)}
+      offset={{ bottom: 300 }}
     >
       <motion.div
         variants={container}
         animate={visible ? "show" : "hidden"}
-        className='grid grid-cols-3 gap-x-5 pt-20 py-10 max-w-6xl mx-auto'
+        className='grid  md:grid-cols-2 gap-y-10 lg:grid-cols-3 gap-x-5 pt-20 py-10 max-w-6xl mx-auto'
       >
         {destinations.map((destination, i) => (
           <DestinationCard
