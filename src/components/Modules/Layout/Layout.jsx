@@ -7,7 +7,7 @@ import LayoutDecore from "../../../assets/layout-decore.png";
 
 const Layout = ({ children }) => {
   return (
-    <div className='relative'>
+    <div className='relative overflow-hidden'>
       <img
         src={LayoutDecore}
         alt='Decore'
