@@ -3,8 +3,6 @@ import { useState } from "react";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import {
   bounceVariants,
-  hoverMotion,
-  linkVariants,
   opacityVariants,
 } from "../../../constants/variants.constant";
 import Container from "../Container/Container";
@@ -52,6 +50,7 @@ const Footer = () => {
       <ReactVisibilitySensor
         partialVisibility
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
+        offset={{ bottom: 300 }}
       >
         <div className='py-20'>
           <Container>
