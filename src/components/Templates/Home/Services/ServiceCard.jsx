@@ -36,10 +36,12 @@ const ServiceCard = ({ img, title, details }) => {
         <div className='text-[#1E1D4C] font-bold'> {title}</div>
         <p className='text-primaryLight font-semibold my-4'>{details}</p>
       </motion.div>
-      <motion.div
-        className='bg-[#DF6951] hidden sm:block  absolute left-[-30px] sm:left-0 bottom-0 w-[100px] -z-10 rounded-tl-[30px] rounded-br-[10px]'
-        variants={cardHover}
-      ></motion.div>
+      <div className='sm:block hidden'>
+        <motion.div
+          className='bg-[#DF6951] hidden sm:block  absolute left-[-30px] sm:left-0 bottom-0 w-[100px] -z-10 rounded-tl-[30px] rounded-br-[10px]'
+          variants={cardHover}
+        ></motion.div>
+      </div>
     </motion.div>
   );
 };

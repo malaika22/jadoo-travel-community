@@ -39,7 +39,7 @@ const Services = () => {
             transition={{ duration: 1, delay: 1 }}
             className='text-center '
           >
-            <div className='grid  sm:grid-cols-2 md:grid-cols-4  pt-20 py-10 max-w-7xl mx-auto'>
+            <div className='grid  sm:grid-cols-2 md:grid-cols-4  pt-20 py-10 gap-y-10 max-w-7xl mx-auto'>
               {services.map((service, i) => (
                 <ServiceCard key={service.title} img={Images[i]} {...service} />
               ))}
