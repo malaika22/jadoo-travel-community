@@ -21,7 +21,7 @@ const Services = () => {
       onChange={(isVisible) => isVisible && setVisible(isVisible)}
       offset={{ bottom: 300 }}
     >
-      <div className='my-20'>
+      <div className='my-20 scroll-mt-24 sm:scroll-mt-10' id='services'>
         <Container>
           <motion.div
             animate={visible ? "visible" : "invisible"}

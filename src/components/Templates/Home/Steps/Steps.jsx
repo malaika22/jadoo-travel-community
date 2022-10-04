@@ -22,7 +22,7 @@ const Steps = () => {
         onChange={(isVisible) => isVisible && setVisible(isVisible)}
         offset={{ bottom: 500 }}
       >
-        <div className='my-20'>
+        <div className='my-20 scroll-mt-24 sm:scroll-mt-10' id='bookings'>
           <Container>
             <div className='grid md:grid-cols-2 gap-x-5 max-w-6xl mx-auto'>
               <motion.div

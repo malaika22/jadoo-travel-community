@@ -7,25 +7,26 @@ import Container from "../../Container/Container";
 const Header = () => {
   const links = [
     {
-      href: "#",
+      href: "#services",
+      title: "Services",
+    },
+    {
+      href: "#destinations",
       title: "Desitnations",
     },
+
     {
-      href: "#",
-      title: "Hotels",
-    },
-    {
-      href: "#",
-      title: "Flights",
-    },
-    {
-      href: "#",
+      href: "#bookings",
       title: "Bookings",
+    },
+    {
+      href: "#flights",
+      title: "Flights",
     },
   ];
   return (
     <Container>
-      <header className='flex justify-between px-4  items-center  pt-10'>
+      <header className='sticky top-0 flex justify-between px-4  items-center  pt-10'>
         <Logo />
         <div className='hidden md:flex justify-between items-center '>
           {/* <div className='grid grid-cols-4 gap-x-4 '> */}
